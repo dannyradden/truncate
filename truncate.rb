@@ -1,11 +1,9 @@
-require 'pry-state'
-
 def truncate(input)
   checker = Array.new(input.length, '')
   p input
   results = []
   round = 0
-  until input.empty? || round == 10
+  until input.empty?
     input.each_with_index do |word, i|
       if letter_to_add = word[round]
         checker[i] += word[round]
